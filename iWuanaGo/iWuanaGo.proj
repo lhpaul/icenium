@@ -28,6 +28,7 @@
     <Folder Include="App_Resources\Android\drawable-ldpi">
       <Platform>Android</Platform>
     </Folder>
+    <Folder Include="css" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="App_Resources\iOS\icon.png" />
@@ -51,6 +52,7 @@
     <Resource Include="App_Resources\Android\drawable-ldpi\icon.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="calendar.html" />
     <Content Include="index.html" />
     <Content Include="cordova.ios.js">
       <Platform>iOS</Platform>
@@ -60,6 +62,24 @@
       <Platform>Android</Platform>
       <TargetName>cordova.js</TargetName>
     </Content>
+    <Content Include="jquery-1.7.2.js" />
+    <Content Include="jquery.js" />
+    <Content Include="jquery.mobile-1.0.1.min.js" />
+    <Content Include="jquery.mobile-1.1.1.js" />
+    <Content Include="js\auth.js" />
+    <Content Include="js\calendar.js" />
+    <Content Include="js\core.js" />
+    <Content Include="js\googlemaps.js" />
+    <Content Include="js\index.js" />
+    <Content Include="js\jquery-ui-1.8.23.custom.min.js" />
+    <Content Include="js\jquery.flip.js" />
+    <Content Include="js\list.js" />
+    <Content Include="js\login.js" />
+    <Content Include="js\map.js" />
+    <Content Include="js\ui\jquery.ui.map.extensions.js" />
+    <Content Include="js\ui\jquery.ui.map.js" />
+    <Content Include="list.html" />
+    <Content Include="login.html" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Telerik\ICE\Tools\Mobile\MobileTools.targets" />
 </Project>

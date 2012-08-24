@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title></title>
+  <script type="text/javascript" charset="utf-8" src="js/login.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      function onBodyLoad()
+      {
+        document.addEventListener("deviceready",onDeviceReady,false);
+      }
+
+      /* When this function is called, PhoneGap has been initialized and is ready to roll */
+      function onDeviceReady()
+      {
+        // do your thing!
+      }
+
+    </script>
+
+  </head>
+  <body onload="onBodyLoad()">
+    <div data-role="page" data-theme="a">
+      <div data-role="header"> 
+        <h1>BitLag</h1> 
+      </div>
+    <div data-role="content" >
+    <div class="content-primary">
+      <form accept-charset="UTF-8" action="login" method="post" id="login">
+        <div class='form_errors'></div>
+            <label for="Your_Email:" class="ui-hidden-accessible">Your email:</label>
+            <input id="user_email" name="user[email]" type="text" placeholder="Email"/>
+            <label for="password" class="ui-hidden-accessible">Password:</label>
+            <input id="user_password" name="user[password]" type="password" placeholder="Password"/>
+            <input id="user_session_submit" name="commit" type="submit" value="Sign in" />
+      </form>
+    </div>
+  </div>
+  </div>
+  </body>
+</html>
+

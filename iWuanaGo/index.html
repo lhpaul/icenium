@@ -1,62 +1,148 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-  <head>
+<head>
+  <!-- Change this if you want to allow scaling -->
+  <meta name="viewport" content="width=default-width; user-scalable=no" />
+
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
   <title></title>
-  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
-    <meta charset="utf-8">
+  <!-- <link rel="stylesheet" href="css/jquery.mobile-1.1.1.css" /> -->
+  <link rel="stylesheet" href="css/jquery.mobile-1.0.1.min.css" />
+  <link rel="stylesheet" href="css/iwuana.css" />
 
+  <!-- // <script type="text/javascript" charset="utf-8" src="jquery-1.7.2.js"></script> -->
+  <!-- // <script src="jquery.mobile-1.1.1.js"></script> -->
 
-    <!-- iPad/iPhone specific css below, add after your main css >
-    <link rel="stylesheet" media="only screen and (max-device-width: 1024px)" href="ipad.css" type="text/css" />        
-    <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="iphone.css" type="text/css" />        
-    -->
-    <!-- If your application is targeting iOS BEFORE 4.0 you MUST put json2.js from http://www.JSON.org/json2.js into your www directory and include it here -->
-    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-    <script type="text/javascript">
+  <script type="text/javascript" charset="utf-8" src="jquery.js"></script>
+  <script src="jquery.mobile-1.0.1.min.js"></script>
 
+  <script src="cordova-2.0.0.js" type="text/javascript"></script>
+  <script type="text/javascript" charset="utf-8" src="js/core.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/auth.js"></script>
+  <!-- map -->
+  <script type="text/javascript" charset="utf-8" src="js/map.js"></script>
+  <script src="js/jquery.flip.js"></script>
+  <script src="js/jquery-ui-1.8.23.custom.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="js/googlemaps.js"></script>
+  <script type="text/javascript" src="js/ui/jquery.ui.map.js"></script>
+  <!-- // <script src="js/MapKit.js" type="text/javascript"></script> -->
+  <!-- calendar -->
+  <link rel="stylesheet" type="text/css" href="css/scheduler/dhxscheduler_mobile.css">
+  <script src="js/scheduler/dhxscheduler_mobile.js" type="text/javascript"></script>
+  <script type="text/javascript" charset="utf-8" src="js/calendar.js"></script>
 
-    // If you want to prevent dragging, uncomment this section
-    /*
-    function preventBehavior(e) 
-    { 
-      e.preventDefault(); 
-    };
-    document.addEventListener("touchmove", preventBehavior, false);
-    */
-    
-    /* If you are supporting your own protocol, the var invokeString will contain any arguments to the app launch.
-    see http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
-    for more details -jm */
-    /*
-    function handleOpenURL(url)
-    {
-        // TODO: do something with the url passed in.
-    }
-    */
-    
-    function onBodyLoad()
-    {        
-        document.addEventListener("deviceready", onDeviceReady, false);
-    }
-    
-    /* When this function is called, Cordova has been initialized and is ready to roll */
-    /* If you are supporting your own protocol, the var invokeString will contain any arguments to the app launch.
-    see http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
-    for more details -jm */
-    function onDeviceReady()
-    {
-        // do your thing!
-        navigator.notification.alert("Cordova is working")
-    }
-    
+  <script type="text/javascript" charset="utf-8">
+
+      function onBodyLoad()
+      {
+        document.addEventListener("deviceready",onDeviceReady,false);
+      }
+      function onDeviceReady()
+      {
+       //   Core.map.getPosition().then(function(position) {
+       //   Core.map.putMap(position.coords);
+       // });
+// var filo = {latitude: -33.498962, longitude: -70.616562 };
+//           Core.map.putMap(filo);
+
+      }
+
     </script>
-  </head>
-  <body onload="onBodyLoad()">
-    <h1>Hey, it's Cordova!</h1>
-    <ol>
-        <li>Check your console log for any white-list rejection errors.</li>
-        <li>Add your allowed <strong>hosts</strong> in Cordova.plist/ExternalHosts (wildcards OK, don't enter the URL scheme)</li>
-    </ol>
-  </body>
+</head>
+<body onload="onBodyLoad()">
+  <div data-role="page" id="map-pg" data-theme="a">
+    <div id ="header" data-role="header" data-id="searchHead">
+      <a href="#" id="locate" data-icon="locate" data-iconpos="notext" data-theme="b" class="top-button" data-corners="false" style="top:3px;">Locate</a>
+      <h1>iWuanaGo</h1>
+      <a href="#" data-transition="slideup" data-rel="dialog" id="settings" data-icon="gear" data-iconpos="notext" data-theme="b" class="top-button ui-btn-right" data-corners="false" style="top:3px;">Settings</a>
+    </div>
+    <!-- /header -->
+    <div data-role="content" style="padding:0px;">
+      <!-- <p>&nbsp;</p>
+    -->
+    <div id="map" class="content-primary">
+      <div id="flipbox"></div>
+      <div id="map_canvas"></div>
+    </div>
+    <!-- /content --> </div>
+  <div id="footer" data-role="footer" class="nav-glyphish-example" data-position="fixed" data-theme="c">
+    <div data-role="navbar" class="nav-glyphish-example" data-grid="b" >
+      <ul>
+        <li>
+          <a href="#" id="map-btn" data-icon="custom"  data-transition="fade" class="ui-btn-active">Map</a>
+        </li>
+        <li>
+          <a href="list.html" id="list-btn" data-icon="custom" data-transition="fade">Search</a>
+        </li>
+        <li>
+          <a href="calendar.html" id="calendar-btn" data-icon="custom" data-transition="fade">Calendar</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- /footer -->
+</div>
+
+<!-- settings -->
+<div data-role="page" id="map-set-pg" data-dom-cache="true">
+  <!-- dialog-->
+
+  <div data-role="header">
+    <h1>Settings</h1>
+  </div>
+  <!-- /header -->
+
+  <div data-role="content">
+
+    <div data-role="fieldcontain" id="category">
+      <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+        <legend>Date:</legend>
+        <input type="radio" name="radio-choice-2" id="radio-choice-21" value="today" checked="checked" />
+        <label for="radio-choice-21">Today</label>
+
+        <input type="radio" name="radio-choice-2" id="radio-choice-22" value="week"  />
+        <label for="radio-choice-22">This Week</label>
+
+        <input type="radio" name="radio-choice-2" id="radio-choice-23" value="weekend"  />
+        <label for="radio-choice-23">This Weekend</label>
+
+      </fieldset>
+    </div>
+
+    <div data-role="fieldcontain">
+      <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+        <legend>Category:</legend>
+        <input type="radio" name="radio-choice-2" id="radio-choice-21" value="party" checked="checked" />
+        <label for="radio-choice-21">Party</label>
+
+        <input type="radio" name="radio-choice-2" id="radio-choice-22" value="music"  />
+        <label for="radio-choice-22">Music</label>
+
+        <input type="radio" name="radio-choice-2" id="radio-choice-23" value="culture"  />
+        <label for="radio-choice-23">Culture</label>
+
+        <input type="radio" name="radio-choice-2" id="radio-choice-24" value="other"  />
+        <label for="radio-choice-24">Other</label>
+      </fieldset>
+    </div>
+
+    <div data-role="fieldcontain">
+      <fieldset data-role="controlgroup" data-type="horizontal">
+        <legend>Popularity(more than):</legend>
+        <input type="radio" name="radio-choice-2" id="radio-choice-21" value="party" checked="checked" />
+        <label for="radio-choice-21">0</label>
+
+        <input type="radio" name="radio-choice-2" id="radio-choice-22" value="music"  />
+        <label for="radio-choice-22">100</label>
+
+        <input type="radio" name="radio-choice-2" id="radio-choice-23" value="culture"  />
+        <label for="radio-choice-23">1000</label>
+
+      </fieldset>
+    </div>
+
+    <a href="#map-pg" data-role="button" data-theme="b" data-rel="back">Apply</a>
+  </div>
+</div>
 </html>
