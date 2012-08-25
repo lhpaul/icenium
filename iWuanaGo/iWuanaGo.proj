@@ -28,7 +28,6 @@
     <Folder Include="App_Resources\Android\drawable-ldpi">
       <Platform>Android</Platform>
     </Folder>
-    <Folder Include="css" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="App_Resources\iOS\icon.png" />
@@ -53,6 +52,102 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="calendar.html" />
+    <Content Include="icons\01-refresh.png" />
+    <Content Include="icons\02-redo.png" />
+    <Content Include="icons\03-loopback.png" />
+    <Content Include="icons\04-squiggle.png" />
+    <Content Include="icons\05-shuffle.png" />
+    <Content Include="icons\06-magnify.png" />
+    <Content Include="icons\07-map-marker.png" />
+    <Content Include="icons\08-chat.png" />
+    <Content Include="icons\09-chat-2.png" />
+    <Content Include="icons\10-medical.png" />
+    <Content Include="icons\11-clock.png" />
+    <Content Include="icons\12-eye.png" />
+    <Content Include="icons\13-target.png" />
+    <Content Include="icons\14-tag.png" />
+    <Content Include="icons\15-tags.png" />
+    <Content Include="icons\16-line-chart.png" />
+    <Content Include="icons\17-bar-chart.png" />
+    <Content Include="icons\18-envelope.png" />
+    <Content Include="icons\19-gear.png" />
+    <Content Include="icons\20-gear2.png" />
+    <Content Include="icons\21-skull.png" />
+    <Content Include="icons\22-skull-n-bones.png" />
+    <Content Include="icons\23-bird.png" />
+    <Content Include="icons\24-gift.png" />
+    <Content Include="icons\25-weather.png" />
+    <Content Include="icons\26-bandaid.png" />
+    <Content Include="icons\27-planet.png" />
+    <Content Include="icons\28-star.png" />
+    <Content Include="icons\29-heart.png" />
+    <Content Include="icons\30-key.png" />
+    <Content Include="icons\31-ipod.png" />
+    <Content Include="icons\32-iphone.png" />
+    <Content Include="icons\33-cabinet.png" />
+    <Content Include="icons\34-coffee.png" />
+    <Content Include="icons\35-shopping.png" />
+    <Content Include="icons\36-toolbox.png" />
+    <Content Include="icons\37-suitcase.png" />
+    <Content Include="icons\38-airplane.png" />
+    <Content Include="icons\39-spraycan.png" />
+    <Content Include="icons\40-inbox.png" />
+    <Content Include="icons\41-picture-frame.png" />
+    <Content Include="icons\42-photos.png" />
+    <Content Include="icons\43-film-roll.png" />
+    <Content Include="icons\44-shoebox.png" />
+    <Content Include="icons\45-movie-1.png" />
+    <Content Include="icons\46-movie-2.png" />
+    <Content Include="icons\47-fuel.png" />
+    <Content Include="icons\48-fork-and-knife.png" />
+    <Content Include="icons\49-battery.png" />
+    <Content Include="icons\50-beaker.png" />
+    <Content Include="icons\51-outlet.png" />
+    <Content Include="icons\52-pine-tree.png" />
+    <Content Include="icons\53-house.png" />
+    <Content Include="icons\54-lock.png" />
+    <Content Include="icons\55-network.png" />
+    <Content Include="icons\56-cloud.png" />
+    <Content Include="icons\57-download.png" />
+    <Content Include="icons\58-bookmark.png" />
+    <Content Include="icons\59-flag.png" />
+    <Content Include="icons\60-signpost.png" />
+    <Content Include="icons\61-brightness.png" />
+    <Content Include="icons\62-contrast.png" />
+    <Content Include="icons\63-runner.png" />
+    <Content Include="icons\64-zap.png" />
+    <Content Include="icons\65-note.png" />
+    <Content Include="icons\66-microphone.png" />
+    <Content Include="icons\67-tshirt.png" />
+    <Content Include="icons\68-paperclip.png" />
+    <Content Include="icons\69-display.png" />
+    <Content Include="icons\70-tv.png" />
+    <Content Include="icons\71-compass.png" />
+    <Content Include="icons\72-pin.png" />
+    <Content Include="icons\73-radar.png" />
+    <Content Include="icons\74-location.png" />
+    <Content Include="icons\75-phone.png" />
+    <Content Include="icons\76-baby.png" />
+    <Content Include="icons\77-ekg.png" />
+    <Content Include="icons\78-stopwatch.png" />
+    <Content Include="icons\79-medical-bag.png" />
+    <Content Include="icons\80-shopping-cart.png" />
+    <Content Include="icons\81-dashboard.png" />
+    <Content Include="icons\82-dog-paw.png" />
+    <Content Include="icons\83-calendar.png" />
+    <Content Include="icons\84-lightbulb.png" />
+    <Content Include="images\ajax-loader.gif" />
+    <Content Include="images\ajax-loader.png" />
+    <Content Include="images\bg.png" />
+    <Content Include="images\bg@2x.png" />
+    <Content Include="images\current_location_icon.png" />
+    <Content Include="images\green_pin.png" />
+    <Content Include="images\icons-18-black.png" />
+    <Content Include="images\icons-18-white.png" />
+    <Content Include="images\icons-36-black.png" />
+    <Content Include="images\icons-36-white.png" />
+    <Content Include="images\pin_shadow.png" />
+    <Content Include="images\red_pin.png" />
     <Content Include="index.html" />
     <Content Include="cordova.ios.js">
       <Platform>iOS</Platform>
@@ -62,9 +157,12 @@
       <Platform>Android</Platform>
       <TargetName>cordova.js</TargetName>
     </Content>
+    <Content Include="iwuana.css" />
     <Content Include="jquery-1.7.2.js" />
     <Content Include="jquery.js" />
+    <Content Include="jquery.mobile-1.0.1.min.css" />
     <Content Include="jquery.mobile-1.0.1.min.js" />
+    <Content Include="jquery.mobile-1.1.1.css" />
     <Content Include="jquery.mobile-1.1.1.js" />
     <Content Include="js\auth.js" />
     <Content Include="js\calendar.js" />
